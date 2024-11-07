@@ -4,29 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kalkulator BMI</title>
-    <link rel="stylesheet" href="css\styles.css"
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>Kalkulator BMI</h1>
-        <form>
-            <label for="jenis-kelamin">Jenis Kelamin:</label><br>
-            <input type="radio" id="pria" name="jenis-kelamin" value="pria">
-            <label for="pria">Pria</label>
-            <input type="radio" id="wanita" name="jenis-kelamin" value="wanita">
-            <label for="wanita">Wanita</label><br>
-            <label for="berat-badan">Berat Badan (kg):</label><br>
-            <input type="number" id="berat-badan" name="berat-badan"><br>
+        <section>
+            <!-- ringkasan mengenai BMI -->
+            <p>
+                Body Mass Index (BMI) atau Indeks Massa Tubuh (IMT) adalah parameter yang digunakan untuk menghitung berat badan seseorang. Melalui perhitungan ini, akan diketahui apakah berat badan Anda tergolong normal, kurang, atau berlebih.<br>
+                Anda dapat mengetahui informasi dasar mengenai masalah berat badan secara keseluruhan. Angka BMI bisa menjadi peringatan bagi Anda untuk menjaga berat badan normal agar hidup lebih sehat
+            </p>
+        </section>
+        <!-- form data yang diperlukan -->
+        <form id="bmi-form" onsubmit="return validateForm()">
             <label for="usia">Usia (tahun):</label><br>
-            <input type="number" id="usia" name="usia"><br>
+            <input type="number" id="usia" name="usia" required><br>
+            <label for="berat-badan">Berat Badan (kg):</label><br>
+            <input type="number" id="berat-badan" name="berat-badan" required><br>
             <label for="tinggi-badan">Tinggi Badan (cm):</label><br>
-            <input type="number" id="tinggi-badan" name="tinggi-badan"><br>
-            <p></p>
+            <input type="number" id="tinggi-badan" name="tinggi-badan" required><br>
             <button type="button" onclick="hitungBMI()">Hitung BMI</button>
-            <button type="reset">Reset</button>
         </form>
-    
-        <div id="hasil"></div>
     </div>
+    <section class="box">
+    <h2>Hasil</h2>
+    <p class="hasil" id="hasil"></p>
+    <p class="bmi"></p>
+    </section>
 </body>
 </html>

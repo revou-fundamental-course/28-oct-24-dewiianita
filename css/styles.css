@@ -1,1 +1,40 @@
-/* ini CSS */
+/* style umum untuk bagian body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  text-align: center;
+  }
+section, div[class="container"] {
+  width: 330px;
+  margin: 0 auto;
+  background-color: rgb(129, 201, 225);
+  border: 1px solid #ccc;
+  border-radius: 7px; 
+  font-size: small;
+}
+section[class="box"] {
+  width: 350px;
+  margin: 0 auto;
+  background-color: rgb(129, 201, 225);
+  border: 1px solid #ccc;
+  border-radius: 7px; 
+  font-size: medium;
+}
+/* style untuk form */
+form {
+  width: 250px;
+  margin: 0 auto;
+  padding: 35px;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  border-color: #002D62; 
+  background-color: #00BFFF;
+  font-size: large;
+input {
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  border-color: #002D62; 
+  }
+label, input[type="number"], input[type="radio"] {
+  margin-bottom: 10px;
+}
